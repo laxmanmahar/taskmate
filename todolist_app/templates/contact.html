@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{%load  static  %}
+{% block title %}
+<title>Welcome to ontact page -TaskMate</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container"  >
+       <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/girl3.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/men1.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+            <div class="col-lg-4">
+               <img src="{% static 'images/girl2.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+            <div class="col-lg-4">
+               <img src="{% static 'images/rashmi.jpg'  %}" class="rounded float-start" width="360" height="250"  alt="fashion">
+            </div>
+            <div class="col-lg-4">
+               <img src="{% static 'images/girl5.jpg'  %}" class="rounded float-start"  alt="fashion">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/girl6.jpg'  %}" class="rounded float-start"  alt="fashion">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+               
+            </div>
+       </div>
+       
+       {% comment %} <div class="row mt-5">
+            <div class="col-6 offset-md-3">
+                <center><p class="h2 text-danger" >Fashion marketing campaigns tend </p></center>
+                <center><p class="h4" mt-3>"Fashion Called: ‘Love Immigration"</p></center>
+                <center><p class="h5">Fashion collaboration</p></center>
+
+               <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg shadow" mt-3>Let's Start</button></a></center>
+            </div>
+        </div> {% endcomment %}
+        <div class="form-inline my-2 my-lg-0">
+          <div class="p-2 bg-dark text-white">Logged in as {{ user.username }}</div>
+          <a href="{% url 'logout' %}">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Logout</button>
+          </a>
+        </div>
+
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Edit task - TaskMate</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+        </br>
+
+    {%if task_object.manage == request.user%}  
+        <form method="POST" clas="row">
+            {% csrf_token %}
+            <label class="col-lg-4"></label>
+            <input type="text" class="form-control col-lg-2" name="task" width=50 placeholder="{{task_object.task}}" value="{{task_object.task}}">
+            <input type="hidden" name="done" value="{{task_object.done}}">
+            </br>
+            <button type="submit" class="btn btn-primary" col-lg-2>Update Task</button>
+        </form>
+    {% else %}
+        <p>Restricted! You can not update</p>
+    {%endif%}
+
+ </div>
+{% endblock content %}

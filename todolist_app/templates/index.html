@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%load  static  %}
+{% block title %}
+<title>Welcome to home page -TaskMate</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container"  >
+       <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/note4.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/note5.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+            <div class="col-lg-4">
+               <img src="{% static 'images/note6.jpg'  %}" class="rounded-lg shadow" width="360" height="250" alt="fashion">
+            </div>
+       </div>
+       
+       <div class="row mt-5">
+            <div class="col-6 offset-md-3">
+                <center><p class="h2 text-danger" >Fashion marketing campaigns tend </p></center>
+                <center><p class="h4" mt-3>"Fashion Called: ‘Love Immigration"</p></center>
+                <center><p class="h5">Fashion collaboration</p></center>
+
+               <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg shadow" mt-3>Let's Start</button></a></center>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
