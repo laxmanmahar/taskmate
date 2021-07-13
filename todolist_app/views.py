@@ -84,6 +84,13 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+# def stool(request):
+#     context = {
+#         'stool_txt': "Welcome to the new website"
+#     }
+#     return render(request, 'stool.html', context)
+
+
 def contact(request):
     context = {
         'contact_txt': "contact with to todolist app! with"
